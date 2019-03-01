@@ -1,7 +1,7 @@
 /*
  *  Project     Segmented LED Display - ASCII Library
  *  @author     David Madison
- *  @modified   JohnnyGalto (added two entries at the end of the array)
+ *  @modified   JohnnyGalto (added entry at the end of the array)
  *  @link       github.com/dmadison/Segmented-LED-Display-ASCII
  *  @license    MIT - Copyright (c) 2017 David Madison
  *
@@ -25,7 +25,7 @@
  *
  */
 
-const unsigned int FourteenSegmentASCII[98] = {
+const unsigned int FourteenSegmentASCII[97] = {
   0x0000, /* (space) */
   0x4006, /* ! */
   0x0202, /* " */
@@ -122,6 +122,5 @@ const unsigned int FourteenSegmentASCII[98] = {
   0x2489, /* } */
   0x0CC0, /* ~ */
   0x0000, /* (del) */
-  0xFFFF, /* All Segments */
-  0x0000  //Won't run without empty value at end
+  0xFFFF /* All Segments */
 };
