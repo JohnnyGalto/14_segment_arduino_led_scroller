@@ -1,5 +1,5 @@
 /*
- *  Project     Segmented LED Display String Scroller
+ *  Project     14-segment LED Multi-Display String Scroller
  *  @author     JohnnyGalto
  *  @link       github.com/JohnnyGalto/14_segment_arduino_led_scroller
  *  @license    MIT - Copyright (c) 2018 JohnnyGalto
@@ -60,11 +60,11 @@
 #define SEG_G1    6
 #define SEG_G2    7
 #define SEG_H     8
-#define SEG_I     9
-#define SEG_J     10
-#define SEG_K     11
-#define SEG_L     12
-#define SEG_M     13
+#define SEG_J     9
+#define SEG_K     10
+#define SEG_L     11
+#define SEG_M     12
+#define SEG_N     13
 
 #define ALL_SEGS  ('z'+6) //Macro to light all segments on a display
 
@@ -108,11 +108,11 @@ void clearDisplays()
   digitalWrite(SEG_G1, HIGH);
   digitalWrite(SEG_G2, HIGH);
   digitalWrite(SEG_H, HIGH);
-  digitalWrite(SEG_I, HIGH);
   digitalWrite(SEG_J, HIGH);
   digitalWrite(SEG_K, HIGH);
   digitalWrite(SEG_L, HIGH);
   digitalWrite(SEG_M, HIGH);
+  digitalWrite(SEG_N, HIGH);
 }
 
 /*
@@ -135,11 +135,11 @@ void printCharacter(unsigned char character, unsigned char charNum)
     digitalWrite(SEG_G1, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_G1)))?LOW:HIGH);
     digitalWrite(SEG_G2, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_G2)))?LOW:HIGH);
     digitalWrite(SEG_H, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_H)))?LOW:HIGH);
-    digitalWrite(SEG_I, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_I)))?LOW:HIGH);
     digitalWrite(SEG_J, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_J)))?LOW:HIGH);
-    digitalWrite(SEG_M, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_K)))?LOW:HIGH); //To accomodate different numbering scheme(switch wires to make permanent)
+    digitalWrite(SEG_K, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_K)))?LOW:HIGH);
     digitalWrite(SEG_L, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_L)))?LOW:HIGH);
-    digitalWrite(SEG_K, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_M)))?LOW:HIGH); //To accomodate different numbering scheme(switch wires to make permanent)
+    digitalWrite(SEG_M, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_M)))?LOW:HIGH);
+    digitalWrite(SEG_N, (FourteenSegmentASCII[character-32]&((unsigned int)pow(2,SEG_N)))?LOW:HIGH);   
   }
 }
 
