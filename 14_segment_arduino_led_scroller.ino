@@ -25,7 +25,7 @@
  */
 
 /*
- * TODO: 
+ * TO USE: 
  *  Ensure FIRST_PIN & LAST_PIN are defined correctly
  *  Software assumes pins used for displays start at FIRST_PIN and continue continuously to LAST_PIN
  *  Modify xxxxx_DISPLAY to use correct pins and also correct number of displays
@@ -34,7 +34,7 @@
  *  Modify displayPin array to match actual number of displays
  * 
  */
-#include "14_Segment_ASCII_HEX.h"
+#include "14_segment_ASCII_HEX.h"
 
 #define FIRST_PIN         0 ////Physical pin number of first pin used on Arduino(used for pin initialization). Assumes pins are contiguous.
 #define LAST_PIN          16 //Physical pin number of last pin used on Arduino(used for pin initialization). Assumes pins are contiguous.
